@@ -1,13 +1,13 @@
 pipeline{
 agent any
 Stages{
-        Stage('Build and Test'){
-            Steps{
+        stage('Build and Test'){
+            steps{
                 echo"Build and Test Successful!"
             }
             }
-            Stage('Generate Artifact'){
-                Steps{
+            stage('Generate Artifact'){
+                steps{
                     echo "hello"
                     }
                     }
