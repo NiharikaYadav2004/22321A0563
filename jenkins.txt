@@ -1,21 +1,31 @@
-pipeline{
+
+pipeline
+{
 agent any
-Stages{
-        stage('Build and Test'){
-            steps{
-                echo"Build and Test Successful!"
-            }
-            }
-            stage('Generate Artifact'){
-                steps{
-                    echo "hello"
-                    }
-                    }
-                    }
-                    Post{
-                        success{
-                            echo 'pipeline completed succesfully'
-                        }
-                    }
-                    }
-                    
+stages
+{
+stage('Build')
+{
+steps
+{
+echo 'build success'
+}
+}
+stage('Test')
+{
+steps
+{
+echo 'test success'
+}
+}
+stage('Deploy')
+{
+steps
+{
+echo 'make publish'
+}
+}
+}
+}
+
+
